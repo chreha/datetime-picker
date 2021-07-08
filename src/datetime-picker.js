@@ -148,10 +148,12 @@ let timezonePicker = {
         inputElem.required = true;
 
         let label = document.createElement('label');
-        label.setAttribute("for", 'timezone-picker-date' + i);
+        label.setAttribute("for", 'timezone-picker-date' + i);        
         if(loopDate.weekday == 6 || loopDate.weekday == 7) {
             label.classList.add("disabled");
             inputElem.disabled = true;
+        } else {
+            label.setAttribute("tabindex", 1);
         }
 
         let headingElem = document.createElement('span');
@@ -166,6 +168,7 @@ let timezonePicker = {
         label.append(headingElem);
         label.append(bodyElem);
         label.addEventListener('click', timezonePicker.dateClicked);
+        label.addEventListener('keypress', timezonePicker.dateClicked);
         document.querySelector('.timezone-picker-dates-container').append(label);                
     },
     init: () => {                                                

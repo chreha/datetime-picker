@@ -211,6 +211,7 @@ body {
     margin:.25em;       
     animation: .35s fallin forwards;
     opacity:0;
+    cursor:pointer;
 }
 @keyframes fallin {
     0% {
@@ -241,6 +242,10 @@ body {
     color:var(--clr-form-dark-500);
     padding:1em;
     display:block;
+}
+.timezone-picker-blocktimes label:hover .timezone-picker-blocktime-display, .timezone-picker-blocktimes label:focus .timezone-picker-blocktime-display{
+    background-color:var(--clr-form-dark-700);
+    color:#fff;
 }
 .timezone-picker-blocktimes input:checked + .timezone-picker-blocktime-display {
     background-color:var(--clr-form-secondary-400);
