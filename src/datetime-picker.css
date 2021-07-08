@@ -314,7 +314,7 @@ body {
     cursor:pointer;
     z-index:1;    
 }
-.datetime-picker-dismiss::after {
+.datetime-picker::after {
     content: '\f057';
     font-family: 'Font Awesome 5 Pro';
     font-weight: 900;
@@ -322,10 +322,10 @@ body {
     position:fixed;
     top:1em;
     right:1em;
-    z-index: 3;
+    z-index: 4;
     font-size:3rem;
     opacity:0;
 }
-.datetime-picker.active .datetime-picker-dismiss::after {
+.datetime-picker.active::after {
     animation:.25s fallin .5s forwards;
 }
