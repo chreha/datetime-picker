@@ -1,7 +1,7 @@
 {
-  "name": "demo-workspace",
+  "name": "datetime-picker",
   "version": "1.0.0",
-  "description": "",
+  "description": "��#\u0000 \u00001\u00001\u0000t\u0000y\u0000-\u0000t\u0000e\u0000s\u0000t\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/chreha/datetime-picker/issues"
   },
-  "homepage": "https://github.com/chreha/datetime-picker#readme"
+  "homepage": "https://github.com/chreha/datetime-picker#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
 }
