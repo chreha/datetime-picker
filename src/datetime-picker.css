@@ -55,7 +55,7 @@ body {
     width:max-content;
     max-width:95%;
     background-color:#fff;
-    padding:.5em;
+    padding:2em .5em;
     margin:.5em .5em .5em .5em;
     font-family: var(--form-body-font);
     position:relative;
