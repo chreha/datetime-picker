@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://pro.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-Bx4pytHkyTDy3aJKjGkGoHPt3tvv6zlwwjc3iqN7ktaiEMLDPqLSZYts2OjKcBx1" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="datetime-picker.css">
+    <script src="luxon.min.js" defer></script>
+    <script src="datetime-picker.js" defer></script>
+</head>
+<body>
+    <button class="show-datetime">Show Datetime</button>
+    <section class="datetime-picker">
+        <form class="datetime-picker-form">
+            <h2>Thanks! What time works best for a quick call?</h2>
+            <p>What day is best for you?</p>
+            <p class="timezone-picker-timezone-display"></p>
+            <div class="timezone-picker-dates">
+                <button type="button" disabled data-rotate-timezone-picker-date="-1" aria-label="Reduce the Date Picker by 1 day."></button>  
+                <div class="timezone-picker-dates-container"></div>          
+                <button type="button" data-rotate-timezone-picker-date="1" aria-label="Advance the Date Picker by 1 day."></button>
+            </div>
+            <p>What time works?</p>
+            <p class="timezone-picker-blocktime"></p>
+            <div class="timezone-picker-blocktimes"><p>Select a date above to be presented wtih available timeslots for that day.</p></div>
+            <button type="submit">Submit Request</button>
+        </form>
+        <div class="datetime-confirm-panel"></div>
+        <button class="datetime-picker-dismiss"></button>
+    </section>    
+</body>
+</html>
