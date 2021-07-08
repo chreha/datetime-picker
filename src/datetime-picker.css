@@ -50,7 +50,7 @@ body {
     text-align: center;
     width:max-content;
     background-color:#fff;
-    padding:1em;
+    padding:.5em;
     font-family: var(--form-body-font);
     position:relative;
     z-index: 2;    
@@ -66,6 +66,8 @@ body {
     font-family: var(--form-heading-font);
     color:var(--clr-form-primary-400);   
     margin-bottom:1em;
+    font-size:2rem;
+    font-size:clamp(1.5rem, 2vw, 2rem);
 }
 .datetime-picker p {
     color:var(--clr-form-dark-400);
@@ -140,10 +142,15 @@ body {
     background-color:transparent;
     color:var(--clr-form-dark-600);
     border:none;            
-    padding:1rem;
+    padding:.5rem;
     font-size:2rem;
     display:block;
     cursor:pointer;
+}
+@media(min-width:460px) {
+    .timezone-picker-dates button {
+        padding:1rem;
+    }
 }
 .timezone-picker-dates button:disabled {
     cursor:default;
@@ -211,12 +218,17 @@ body {
 
 .timezone-picker-blocktimes label {
     display:block;
-    width:calc(33% - .5em);
+    width:calc(50% - .5em);
     position:relative;     
     margin:.25em;       
     animation: .35s fallin forwards;
     opacity:0;
     cursor:pointer;
+}
+@media(min-width:460px) {
+    .timezone-picker-blocktimes label {     
+        width:calc(33% - .5em);
+    }
 }
 @keyframes fallin {
     0% {
