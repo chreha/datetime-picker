@@ -55,10 +55,16 @@ let timezonePicker = {
     buttonClick: function(e) {
         let directionValue = parseInt(this.getAttribute('data-rotate-timezone-picker-date'));
         timezonePicker.currDaysOut += directionValue;
-        if(timezonePicker.currDaysOut < (timezonePicker.maxDaysOut.days - 7)) {                                                        
-            document.querySelector('.timezone-picker-dates button:last-child').disabled = false;
+        let containerWidth = document.querySelector('.timezone-picker-dates-container').clientWidth;
+        let datesShown = Math.ceil(containerWidth / 65);
+        let amtToTranslate = timezonePicker.currDaysOut * 65;
+        if(timezonePicker.currDaysOut < (timezonePicker.maxDaysOut.days - datesShown)) {
+            document.querySelector('.timezone-picker-dates button:last-child').disabled = false;            
         } else {
             document.querySelector('.timezone-picker-dates button:last-child').disabled = true;
+            if(containerWidth % 65 != 0) {                
+                amtToTranslate += containerWidth % 65;
+            }
         }
         if(timezonePicker.currDaysOut > 0) {
             document.querySelector('.timezone-picker-dates button:first-child').disabled = false;
@@ -66,7 +72,7 @@ let timezonePicker = {
             document.querySelector('.timezone-picker-dates button:first-child').disabled = true;
         }                        
         document.querySelectorAll('.timezone-picker-dates label').forEach((elem) => {
-            elem.style.transform = "translateX(" + -1 * timezonePicker.currDaysOut * 65 + "px)";
+            elem.style.transform = "translateX(" + -1 * amtToTranslate + "px)";
         }); 
     },
     dateClicked: function(e) {
