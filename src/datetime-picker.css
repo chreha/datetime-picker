@@ -50,12 +50,17 @@ body {
     text-align: center;
     width:max-content;
     background-color:#fff;
-    padding:2em;
+    padding:1em;
     font-family: var(--form-body-font);
     position:relative;
     z-index: 2;    
     max-height:100%;
     overflow:auto;
+}
+@media(min-width:500px) {
+    .datetime-picker-form {
+        padding:2em;
+    }
 }
 .datetime-picker h2{
     font-family: var(--form-heading-font);
