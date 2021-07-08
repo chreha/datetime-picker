@@ -319,7 +319,7 @@ body {
     font-family: 'Font Awesome 5 Pro';
     font-weight: 900;
     color:var(--clr-form-dark-700);
-    position:absolute;
+    position:fixed;
     top:1em;
     right:1em;
     z-index: 3;
