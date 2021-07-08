@@ -67,7 +67,7 @@ body {
     color:var(--clr-form-primary-400);   
     margin-bottom:1em;
     font-size:2rem;
-    font-size:clamp(1.5rem, 2vw, 2rem);
+    font-size:clamp(1.25rem, 3vw, 1.75rem);
 }
 .datetime-picker p {
     color:var(--clr-form-dark-400);
