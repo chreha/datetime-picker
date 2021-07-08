@@ -79,6 +79,7 @@ let timezonePicker = {
         //write the selectable time data
         if(!this.classList.contains('disabled')) {
             let btn = document.querySelector('.datetime-picker-form [type=submit]'); btn.classList.remove('active'); btn.disabled=true;
+            btn.scrollIntoView();
             let clickedDate = this.querySelector('input').date;                    
             this.querySelector('input').checked = true;                    
             let local = luxon.DateTime.local();
