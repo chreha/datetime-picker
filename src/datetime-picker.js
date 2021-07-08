@@ -79,10 +79,6 @@ let timezonePicker = {
         //write the selectable time data
         if(!this.classList.contains('disabled')) {
             let btn = document.querySelector('.datetime-picker-form [type=submit]'); btn.classList.remove('active'); btn.disabled=true;
-            
-            let scrollHeight = document.querySelector('.datetime-picker-form').scrollHeight;
-            document.querySelector('.datetime-picker-form').scrollTop = scrollHeight;
-
             let clickedDate = this.querySelector('input').date;                    
             this.querySelector('input').checked = true;                    
             let local = luxon.DateTime.local();
@@ -107,7 +103,7 @@ let timezonePicker = {
             while(loopDate.diff(endLoopDate).toObject().milliseconds < 0) {
                 let label = document.createElement('label');
                 label.setAttribute('for', 'timezone-picker-block' + index);
-                label.addEventListener('click', function(e) { let btn = document.querySelector('.datetime-picker-form [type=submit]'); btn.classList.add('active'); btn.disabled=false; })
+                label.addEventListener('click', function(e) { let btn = document.querySelector('.datetime-picker-form [type=submit]'); btn.classList.add('active'); btn.disabled=false; setTimeout(function() {document.querySelector('.datetime-picker [type=submit]').scrollIntoView({behavior: "smooth"}); }, 250); })
 
                 let inputElem = document.createElement('input');
                 inputElem.type = 'radio';
