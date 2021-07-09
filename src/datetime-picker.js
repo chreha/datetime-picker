@@ -29,8 +29,8 @@ let timezonePicker = {
     startTime: null,
     endTime: null,
     leadOut: {hours:1},
-    startAt: {hours:8, minute:0},
-    endAt: {hour:17, minute:30},
+    startAt: {hours:9, minute:0},
+    endAt: {hour:15, minute:0},
     formSubmit: (e) => {
         e.preventDefault();
         let selectedDateInput = document.querySelector("[name=timezone-picker-date]:checked");
